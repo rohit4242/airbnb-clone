@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'auto';
 
 import Container from "@/components/Container";
 import ListingCard from "@/components/listings/ListingCard";
