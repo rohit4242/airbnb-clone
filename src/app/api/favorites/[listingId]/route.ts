@@ -23,7 +23,7 @@ export async function POST(
     throw new Error('Invalid ID');
   }
 
-  let favoriteIds = [...(currentUser.favoriteIds || [])];
+  let favoriteIds = [...(currentUser.favoriteIds as string[]) || []];
 
   favoriteIds.push(listingId);
 
@@ -55,7 +55,7 @@ export async function DELETE(
     throw new Error('Invalid ID');
   }
 
-  let favoriteIds = [...(currentUser.favoriteIds || [])];
+  let favoriteIds = [...(currentUser.favoriteIds as string[]) || []];
 
   favoriteIds = favoriteIds.filter((id) => id !== listingId);
 
